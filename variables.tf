@@ -15,3 +15,4 @@ variable "vpc_cidr" {
   type = "list"
 }
 variable "redshift_bucket_name" {}
+variable "charge_code" {}

@@ -1,5 +1,5 @@
 module "redshift" {
-  source  = "github.com/terraform-community-modules/tf_aws_redshift"
+  source  = "github.com/aimtheory/tf_aws_redshift"
 
   # Redshift Cluster Inputs
   cluster_identifier      = "${var.redshift_cluster_identifier}"
@@ -20,4 +20,7 @@ module "redshift" {
 
   # IAM Roles
   cluster_iam_roles = ["${aws_iam_role.redshift.arn}"]
+
+  # Tags for all resources
+  default_tags = "${local.default_tags}"
 }
